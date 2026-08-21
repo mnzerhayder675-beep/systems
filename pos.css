@@ -1,0 +1,379 @@
+/* ملف أنماط شاشة البيع */
+
+:root {
+    --pos-primary: #2c3e50;
+    --pos-secondary: #3498db;
+    --pos-success: #27ae60;
+    --pos-danger: #e74c3c;
+    --pos-warning: #f39c12;
+}
+
+.pos-container {
+    height: calc(100vh - 120px);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.pos-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+
+.invoice-info {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--pos-primary);
+}
+
+.invoice-info span {
+    margin-left: 20px;
+    padding: 5px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+
+.pos-body {
+    display: flex;
+    height: calc(100% - 80px);
+    gap: 0;
+}
+
+/* Search Section */
+.search-section {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-right: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+#search-input {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: var(--pos-secondary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+#search-results {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.medicine-result {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medicine-result:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.medicine-result:last-child {
+    border-bottom: none;
+}
+
+.medicine-name {
+    font-weight: bold;
+    color: var(--pos-primary);
+    font-size: 1.1rem;
+}
+
+.medicine-details {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.medicine-price {
+    font-weight: bold;
+    color: var(--pos-success);
+    font-size: 1.2rem;
+}
+
+/* Cart Section */
+.cart-section {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-section h3 {
+    color: var(--pos-primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart-table thead {
+    background: var(--pos-primary);
+    color: white;
+}
+
+#cart-table th {
+    padding: 15px;
+    text-align: right;
+    font-weight: 600;
+}
+
+#cart-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+}
+
+#cart-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+#cart-table td {
+    padding: 12px 15px;
+    text-align: right;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: var(--pos-secondary);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.qty-btn:hover {
+    background: var(--pos-primary);
+    transform: scale(1.1);
+}
+
+.qty-input {
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.remove-btn {
+    padding: 5px 15px;
+    background: var(--pos-danger);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Cart Summary */
+.cart-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: auto;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row.total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--pos-primary);
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 2px solid #ddd;
+}
+
+/* Payment Section */
+.payment-section {
+    margin-top: 20px;
+}
+
+#payment-method {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    background: white;
+}
+
+.payment-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-save, .btn-clear, .btn-print {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-save {
+    background: linear-gradient(135deg, var(--pos-success) 0%, #219653 100%);
+    color: white;
+}
+
+.btn-save:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+.btn-clear {
+    background: linear-gradient(135deg, var(--pos-danger) 0%, #c0392b 100%);
+    color: white;
+}
+
+.btn-clear:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-print {
+    background: linear-gradient(135deg, var(--pos-warning) 0%, #e67e22 100%);
+    color: white;
+}
+
+.btn-print:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+/* Patient Section */
+.patient-section {
+    background: white;
+    padding: 20px;
+    border-left: 2px solid #eee;
+    width: 300px;
+}
+
+#patient-search {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.patient-info-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.patient-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--pos-primary);
+    margin-bottom: 10px;
+}
+
+.patient-details {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.item-added {
+    animation: slideIn 0.3s ease-out;
+}
+
+.item-removed {
+    animation: fadeOut 0.3s ease-out;
+}
+
+/* Responsive POS */
+@media (max-width: 1200px) {
+    .pos-body {
+        flex-direction: column;
+    }
+    
+    .patient-section {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #eee;
+    }
+}
+
+@media (max-width: 768px) {
+    .pos-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .payment-buttons {
+        flex-direction: column;
+    }
+}
